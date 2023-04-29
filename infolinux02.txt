@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Este script muestra información del sistema
+
+echo "Información del sistema:"
+echo "---------------------------------------"
+echo "Nombre del host: $(hostname)"
+echo "Kernel: $(uname -r)"
+echo "Sistema operativo: $(lsb_release -d | awk '{print $2, $3, $4}')"
+echo "Memoria libre: $(free -h | awk '/^Mem/ {print $4}')"
+echo "---------------------------------------"
